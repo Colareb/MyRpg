@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Weapons -->
+        <!-- DoubleSwords -->
+            <string name="elvish_swords_name">Spade Elfiche</string>
+            <string name="elvish_swords_description">Stupende spade elfiche</string>
+
+    <!-- Armor -->
+        <!-- Helmets -->
+            <string name="leather_helmet_name">Cappuccio di pelle</string>
+            <string name="leather_helmet_description">Descrizione cappuccio di pelle</string>
+</resources>

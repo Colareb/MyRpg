@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="app_name" translatable="false">RPG</string>
+
+    <!-- Weapons -->
+        <!-- DoubleSwords -->
+            <string name="elvish_swords_name">Elvish Swords</string>
+            <string name="elvish_swords_description">Astonishing elvish swords</string>
+
+    <!-- Armor -->
+        <!-- Helmets -->
+            <string name="leather_helmet_name">Leather Helmet</string>
+            <string name="leather_helmet_description">Leather helmet description</string>
+
+</resources>
