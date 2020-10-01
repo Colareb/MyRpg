@@ -1,18 +1,12 @@
-package com.bignerdranch.android.rpg.models.heroes.superclass
+package com.bignerdranch.android.rpg.models.creatures.heroes.superclass
 
-import com.bignerdranch.android.rpg.models.Statistics
-import com.bignerdranch.android.rpg.models.equipment.superclass.Equipment
+import com.bignerdranch.android.rpg.models.creatures.superclass.Creature
+import com.bignerdranch.android.rpg.models.equipment.armor.superclass.Armor
+import com.bignerdranch.android.rpg.models.equipment.weapons.superclass.Weapon
 
-abstract class Hero(val name: String) {
+abstract class Hero(val name: String): Creature(name) {
 
-    val stats: Statistics = Statistics(0,0,0,0,0,0)
-    val equipment: ArrayList<Equipment> = ArrayList()
-
-    var level: Int = 1
-    var hp: Int = 0
-    var mp: Int = 0
-
-    fun levelOne(constitution: Int, strength: Int, dexterity: Int, intelligence: Int, defense: Int, elusion: Int, equipment: ArrayList<Equipment>) {
+    fun levelOne(constitution: Int, strength: Int, dexterity: Int, intelligence: Int, defense: Int, elusion: Int, weapons: List<Weapon>, armor: List<Armor>) {
         stats.constitution = constitution
         stats.strength = strength
         stats.dexterity = dexterity
@@ -23,7 +17,9 @@ abstract class Hero(val name: String) {
         hp = constitution * 5
         mp = intelligence * 3
 
-        this.equipment.addAll(equipment)
+        this.weapons.addAll(weapons)
+        this.armor.addAll(armor)
+
     }
 
     fun levelUp( constitution: Int, strength: Int, dexterity: Int, intelligence: Int, defense: Int, elusion: Int) {
@@ -42,6 +38,6 @@ abstract class Hero(val name: String) {
 
     override fun toString(): String {
 
-        return "My name is $name, i have ${equipment[0].name} plus ${equipment[1].name} and my stats are:\n ${stats.toString()}"
+        return "My name is $name, i have ${weapons[0].name} plus ${armor[0].name} and my stats are:\n ${stats.toString()}"
     }
 }
